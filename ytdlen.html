@@ -120,7 +120,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 	   <script type="text/javascript">
           
            $(".click-btn-down").click(function(){var link = $(".link").val();var fromate = $(".formte").children("option:selected").val();var src =""+link+"="+fromate+"";downloadVideo(link,fromate);});
-           function closeBtn() {let closeBtn = document.getElementById("link");closeBtn.style.visibility = "hidden";let closeB = document.getElementById("b");closeB.style.visibility = "hidden";let nt = document.getElementById("NewTxt").innerHTML="សូមជ្រេីសរេីសនូវជម្រេីសដែលអ្នកចង់ទាញយកខាងក្រោម! <br />សូមវិលត្រឡប់មក Website នេះវិញបន្ទាប់ពីបានទាញយកនូវវិឌីអូឬ MP3 ហេីយ។";}
+           function closeBtn() {let closeBtn = document.getElementById("link");closeBtn.style.visibility = "hidden";let closeB = document.getElementById("b");closeB.style.visibility = "hidden";let nt = document.getElementById("NewTxt").innerHTML="Please select the format that you want to download! <br />Refresh the website after you have downloaded!";}
            function downloadVideo(link,fromate) {
            $('.download-video').html('<iframe style="width:800px;float:none;height:250px;border:0;overflow:hidden;" scrolling="no" src="https://loader.to/api/card/?url='+link+'"></iframe>');}</script>
        <div class="footer-col">
