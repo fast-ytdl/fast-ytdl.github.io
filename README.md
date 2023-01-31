@@ -1,2 +1,2 @@
-# fast-ytdl.github.io
+https://fast-ytdl.github.io
 Power by Chhai Developer - Github
