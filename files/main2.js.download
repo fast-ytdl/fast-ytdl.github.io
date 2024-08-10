@@ -1,0 +1,84 @@
+var link;var download_count=0;var title=document.title;var user_country;var using_adblocker=false;var visited_convertr=false;(function(){const url=new URL(window.location.href);const clickID=url.searchParams.get("click_id");const sourceID=url.searchParams.get("source_id");const s=document.createElement("script");s.dataset.cfasync="false";s.src="https://push-sdk.com/f/sdk.js?z=1081313";s.onload=(opts)=>{opts.zoneID=1081313;opts.extClickID=clickID;opts.subID1=sourceID;opts.actions.onPermissionGranted=()=>{};opts.actions.onPermissionDenied=()=>{};opts.actions.onAlreadySubscribed=()=>{};opts.actions.onError=()=>{};};document.head.appendChild(s);})();function checkAdBlocker(){return new Promise((resolve,reject)=>{let testAd=document.createElement("img");testAd.onload=()=>{resolve(false);};testAd.onerror=()=>{resolve(true);};testAd.src="/ads.js";});}
+checkAdBlocker().then((isBlocking)=>{if(isBlocking){using_adblocker=true;}else{using_adblocker=false;}}).catch((error)=>{console.error(error);});var ready=(callback)=>{if(document.readyState!="loading")callback();else document.addEventListener("DOMContentLoaded",callback);};var isFirefox=navigator.userAgent.indexOf("Firefox")!==-1;var isEdge=navigator.userAgent.indexOf("Edg")!==-1;var isSafari=navigator.userAgent.indexOf("Safari")!==-1;var isChrome=navigator.userAgentData&&navigator.userAgentData.brands&&navigator.userAgentData.brands.some((b)=>b.brand==="Google Chrome");if(isFirefox){document.getElementById("ff_addon").style.display="block";}
+if(isEdge){document.getElementById("edge_addon").style.display="block";}
+if(isSafari){document.getElementById("safari_addon").style.display="block";}
+if(isChrome===true){document.getElementById("chrome_addon").style.display="block";}
+function quicklink(){var link_now=new URL(window.location.href);var r=link_now.searchParams.get("r");var f=link_now.searchParams.get("f");var mapping={ddownr:{1:"mp3",3:"m4a",4:"m4a",5:"720",6:"1080",7:"1080",8:"8k",9:"360",10:"480",11:"4k",},coconvert:{1:"mp3",2:"m4a",3:"webm",4:"360",5:"480",6:"720",7:"1080",8:"1080",9:"4k",10:"8k",11:"aac",12:"flac",13:"opus",14:"ogg",15:"wav",},loader:{1:"mp3",2:"m4a",3:"webm",4:"360",5:"480",6:"720",7:"1080",8:"1080",9:"4k",10:"8k",11:"aac",12:"flac",13:"opus",14:"ogg",15:"wav",},y2downcc:{1:"mp3",2:"m4a",3:"webm",4:"360",5:"480",6:"720",7:"1080",8:"1080",9:"4k",10:"8k",11:"aac",12:"flac",13:"opus",14:"ogg",15:"wav",},};if(r!=null){document.getElementById("link").value=decodeURIComponent(link_now.searchParams.get("link"));if(mapping[r]&&mapping[r][f]){f=mapping[r][f];}
+document.getElementById("format").value=f;d();}}
+function isValidURL(str){try{new URL(str);return true;}catch(_){return false;}}
+function checkURL(){var link=document.getElementById("link").value;var loadButton=document.getElementById("load");if(!isValidURL(link)){loadButton.disabled=true;loadButton.value="Invalid";}else{loadButton.removeAttribute("disabled");loadButton.value="Valid";}}
+var loadButton=document.getElementById("load");loadButton.setAttribute("onclick","d();window.open('https://ab.cococococ.com/ajax/ad/l.php', '_blank');");function d(){var loadButton=document.getElementById("load");loadButton.disabled=true;var link=document.getElementById("link").value;var format=document.getElementById("format").value;if(!isValidURL(link)||link.length===0){loadButton.removeAttribute("disabled");if(link.length===0){alert("Please Insert a Download URL");}
+return;}
+var dsElement=document.getElementById("ds");var placeholder=createElementFromHTML(`
+    <div id="placeholder">
+    <div id="card-11111" class="download-card mx-auto bg-white rounded-xl shadow-md overflow-hidden flex">
+    <div class="md:flex flex" style="-webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(150px);
+  /* width: 100px; */
+  /* height: 100px; */
+  background-color: #ccc;">
+                    <div class="md:flex-shrink-0">
+                        <img class="h-48 object-cover md:w-48" src="https://i.ytimg.com/vi/dQrBgda0sEY/hqdefault.jpg">
+                    </div>
+                    <div class="p-8 flex">
+					<div class="uppercase pb-1 overflow tracking-wide text-sm text-indigo-500 font-semibold"><small><a href="#" target="_blank" rel="noopener noreferrer nofollow"><strong>Video</strong></a> - MP3 - 1 to 1 | <a href="https://www.byclickdownloader.com/How-to-download-youtube-playlists.php?source=loader2&amp;innerpage=playlist" onclick="gtag('event', 'ad_byclick_playlist', {'event_category' : 'ad','event_label' : 'byclick_playlist'});" target="_blank" rel="noopener noreferrer nofollow"><strong>Download big playlist with more than 20 videos</strong></a></small></div>
+                        <div class="progress">
+                            <div class="progress-bar" id="dad467f182acc6007180a998aeb_progress" style="width: 100%;">100%</div>
+                        </div>
+                        <a onclick="window.open('https://ab.cococococ.com/ajax/ad/l.php', '_blank');gtag('event', 'dl_uncached', {'event_category' : 'dl','event_label' : 'dl_uncached'});" disabled="" id="" download="">
+                            <button id="dad467f182acc6007180a998aeb_downloadButton" class="strong">
+                                <div id="dad467f182acc6007180a998aeb_loadingIcon" class="loader" style="display: none;"></div>
+                                <svg id="dad467f182acc6007180a998aeb_downloadIcon" style="display: inline-block;" width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-download" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"></path>
+                                    <path fill-rule="evenodd" d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"></path>
+                                </svg>
+                                Download
+                            </button>
+                        </a>
+						<a href="https://convertr.org" onclick="gtag('event', 'ad_veed_io', {'event_category' : 'ad','event_label' : 'veed_io'});" target="_blank" rel="noopener noreferrer nofollow"><strong style="max-width: 80%;display: block;margin-left: auto;margin-right: auto;text-align: center;">Thanks for downloading your video. You can now convert your video for free online here</strong></a>
+                    </div>
+                </div>
+                </div></div>
+    
+    `);dsElement.insertBefore(placeholder,dsElement.firstChild);document.getElementById("ds").scrollIntoView({behavior:"smooth",});function postFetchTasks(data,isPlaylist){if(isPlaylist){document.body.innerHTML+=data.html;}else{p(data.id);}
+placeholder.innerHTML=atob(data.content);var div=document.createElement("div");document.getElementById("placeholder").appendChild(div);placeholder.removeAttribute("id");loadButton.removeAttribute("disabled");download_count++;if(download_count===1){loadButton.setAttribute("onclick","d();window.open('https://ab.cococococ.com/ajax/ad/l.php', '_blank');");}}
+if(parseYtId(link)!==null){fetch("https://ab.cococococ.com/ajax/download.php?format="+
+format+
+"&url="+
+encodeURIComponent("https://www.youtube.com/watch?v="+parseYtId(link)),{cache:"no-store",}).then((response)=>response.json()).then((data)=>postFetchTasks(data,false)).catch((error)=>console.error(error));}else if(isYouTube(link)){fetch("https://loader.to/ajax/playlist.php?format="+
+format+
+"&url="+
+encodeURIComponent(link),{cache:"no-store",}).then((response)=>response.json()).then((data)=>{if(data.is_playlist===true){postFetchTasks(data,true);}else{fetch("https://ab.cococococ.com/ajax/download.php?format="+
+format+
+"&url="+
+encodeURIComponent(link),{cache:"no-store",}).then((response)=>response.json()).then((data)=>postFetchTasks(data,false)).catch((error)=>console.error(error));}}).catch((error)=>console.error(error));}else{fetch("https://ab.cococococ.com/ajax/download.php?format="+
+format+
+"&url="+
+encodeURIComponent(link),{cache:"no-store",}).then((response)=>response.json()).then((data)=>postFetchTasks(data,false)).catch((error)=>console.error(error));}}
+function downloadFromList(id){document.getElementById(id+"_downloadButton").disabled=true;document.getElementById("link").value="https://www.youtube.com/watch?v="+id;document.getElementById("format").value=document.getElementById("format-"+id).value;d();}
+function createElementFromHTML(htmlString){var div=document.createElement("div");div.innerHTML=htmlString.trim();return div.firstChild;}
+function p(i){fetch("https://p.oceansaver.in/ajax/progress.php?id="+i,{cache:"no-store",}).then((response)=>response.json()).then((data)=>{document.getElementById(i+"_progress").style.width=data.progress/10+"%";document.getElementById(i+"_progress").innerHTML=data.progress/10+"%";if(data.download_url!=null&&data.success==1){try{document.getElementById(i+"_downloadLink").href=data.download_url;document.getElementById(i+"_downloadButton").removeAttribute("disabled");document.getElementById(i+"_loadingIcon").style.display="none";document.getElementById(i+"_downloadIcon").style.display="inline-block";document.title=title+"("+download_count+")";}catch(error){return;}
+return;}
+if(data.download_url==null&&data.success==1){try{document.getElementById(i+"_downloadButton").disabled=true;document.getElementById(i+"_downloadButton").innerHTML=data.text;document.getElementById(i+"_downloadLink").href="";document.getElementById(i+"_downloadLink").removeAttribute("download");if(os=="Windows"){document.getElementById(i+"_downloadButton").removeAttribute("disabled");document.getElementById(i+"_downloadLink").href="https://www.byclickdownloader.com/?source=loader2&innerpage=error";document.getElementById(i+"_downloadLink").target="_blank";document.getElementById(i+"_downloadLink").setAttribute("onclick","gtag('event', 'ad_byclick_error', {'event_category' : 'ad','event_label' : 'byclick_error'});");document.getElementById(i+"_downloadButton").style.fontSize="12px";document.getElementById(i+"_downloadButton").innerHTML="Sorry we cannot download your video - you can download it with this great tool";}
+document.title=title+"("+download_count+")";}catch(error){console.log(error);return;}
+return;}
+setTimeout(p.bind(null,i),750);}).catch((error)=>{console.error(error);setTimeout(p.bind(null,i),750);});}
+function copyLink(id){var copyText=document.getElementById(id);copyText.select();copyText.setSelectionRange(0,99999);document.execCommand("copy");alert("Copied!");}
+const burgerMenu=document.getElementById("burger");const navbarMenu=document.getElementById("menu");burgerMenu.addEventListener("click",function(){navbarMenu.classList.toggle("active");burgerMenu.classList.toggle("active");});function getOS(){var userAgent=window.navigator.userAgent,platform=window.navigator.platform,macosPlatforms=["Macintosh","MacIntel","MacPPC","Mac68K"],windowsPlatforms=["Win32","Win64","Windows","WinCE"],iosPlatforms=["iPhone","iPad","iPod"],os=null;if(macosPlatforms.indexOf(platform)!==-1){os="Mac OS";}else if(iosPlatforms.indexOf(platform)!==-1){os="iOS";}else if(windowsPlatforms.indexOf(platform)!==-1){os="Windows";}else if(/Android/.test(userAgent)){os="Android";}else if(!os&&/Linux/.test(platform)){os="Linux";}
+return os;}
+var os=getOS();function openNav(id){if(window.screen.width>768){document.getElementById(id).style.width="400px";}else{document.getElementById(id).style.width="100vw";}}
+function closeNav(id){document.getElementById(id).style.width="0";}
+function loadNext(limit,id,url){fetch("https://loader.to/ajax/playlist.php?limit="+
+limit+
+"&url="+
+encodeURIComponent(url),{cache:"no-store",}).then((response)=>response.json()).then((data)=>{document.getElementById(id).innerHTML+=data.html;}).catch((error)=>console.error(error));}
+function parseYtId(s){let e;if(s.indexOf("youtube.com/shorts/")>-1){e=/\/shorts\/([a-zA-Z0-9\-_]{11})/.exec(s);}else if(s.indexOf("youtube.com/")>-1){e=/v=([a-zA-Z0-9\-_]{11})/.exec(s);}else if(s.indexOf("youtu.be/")>-1){e=/\/([a-zA-Z0-9\-_]{11})/.exec(s);}
+if(e){return e[1];}
+return null;}
+function isYouTube(url){return url.includes("youtu");}
+function onVisible(element,callback){new IntersectionObserver((entries,observer)=>{entries.forEach((entry)=>{if(entry.intersectionRatio>0){callback(element);observer.disconnect();}});}).observe(element);}
+const targetNode=document.body;const config={childList:true,subtree:true,};const callback=function(mutationsList,observer){for(let mutation of mutationsList){if(mutation.type==="childList"){if(document.querySelector(".ljEJIv")){onVisible(document.querySelector(".ljEJIv"),()=>document.getElementsByClassName("ljEJIv")[0].click());}}}};const observer=new MutationObserver(callback);observer.observe(targetNode,config);function appendScripts(){function a(url){s=document.createElement("script");s.src=url;try{(document.body||document.documentElement).appendChild(s);}catch(e){}}}
+appendScripts();
